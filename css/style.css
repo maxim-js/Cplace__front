@@ -61,10 +61,18 @@
       color: white;
   }
 
+
+
   
 
 
 /* ind.html */
+
+
+.my-container {
+    margin: 0 auto;
+    max-width: 2000px;
+}
 .toggle-block {
     height: 650px;
     background-color: black;
@@ -128,7 +136,7 @@
 }
 
 .black-secondary {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.83);
 }
 
 .problem-left {
@@ -164,9 +172,10 @@
     justify-content: center;
     align-items: center;
     color: white;
-    height: 75px;
-    width: 75px;
-    border-radius: 55px;
+    font-size: 24px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
 }
 .product-color {
     color: #b0252a;
@@ -204,6 +213,7 @@
     padding: 30px 20% 30px 0;
     justify-content: center;
 }
+
 .app-title {
     font-size: 90px;
     font-weight: 400;
@@ -216,10 +226,15 @@
     font-size: 32px;
     letter-spacing: 3px;
     padding-right: 5%;
+    padding-left: 5px;
 }
 .app-subtitle a {
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 24px;
+}
+
+.app-subtitle a:hover {
+    color: #c4494d;
 }
 
 .app-double {
@@ -267,7 +282,7 @@
 }
 
 .app-cbook-title {
-    padding-left: 32%;
+    padding-left: 40%;
 }
 
 
@@ -281,29 +296,120 @@
 .support-title {
     font-size: 48px;
     margin-bottom: 40px;
+    text-align: center;
     font-weight: 600;
+    letter-spacing: 3px;
+
+    
+}
+.support-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    height: 20vh;
+    letter-spacing: 1px;
 }
 .support-list {
+    border: 1px solid #b0252a;
+    border-radius: 10px;
+    padding: 0px 15px 15px 15px;
+    background-color: #b0252a;
 }
 .support .row {
     margin-top: 60px;
+}
+
+.support-border {
+    border-right: 2px solid white;
+}
+
+.support-list-name {
+    padding-top: 11px;
+}
+.support-list-value {
+    padding-bottom: 11px;
+}
+.support-list-border {
+    border-bottom: 1px solid white;
 }
 /* FEEDBACK */
 
 .feedback {
     padding-left: 15px;
 }
-.support-subtitle {
-    font-size: 24px;
-    font-weight: 500;
-    height: 20vh;
-}
+
 form.feedback {
+    margin-top: 25px;
     max-width: 400px;
 }
 
 
 
+
+/* card */
+
+.bcard {
+    border-radius: 10px;
+    display: flex;
+    font-weight: 600;
+    padding: 10px 15px;
+    margin: 25px 0;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 180px;
+    width: 300px;
+}
+
+ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+.bcard-bank {
+    font-weight: 700;
+    font-size: 20px;
+}
+.bcard-bank-sber {
+    color: rgb(4, 106, 56)
+}
+.bcard-bank-tinkoff {
+    color: #d6d7d8
+}
+.bcard-number {
+    letter-spacing: 2px;    
+}
+.bcard-item {
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 30px;
+    width: 45px;
+    border-radius: 5px;
+}
+
+.bcard-item-sber {
+    background-color: #d1ae30;
+}
+
+.bcard-item-tinkoff {
+    background-color: #d8d9d9;
+}
+
+.bcard-bgc-sber {
+    background-color: #aab2b5;
+}
+.bcard-bgc-tinkoff {
+    background-color: black;
+}
+.bcard-border-right {
+    border-right: 1px solid black;
+}
+.bcard-border-left {
+    border-left: 1px solid black;
+}
+.bcard-border-bottom {
+    border-bottom: 1px solid black;
+}
 
 
 .navbar-dark .navbar-nav .nav-link {
@@ -316,6 +422,9 @@ form.feedback {
 .footer-subtitle {
     color: white;
     font-size: 20px;
+}
+.footer-list {
+    margin-top: 20px;
 }
 
 a.active.focus,
@@ -355,8 +464,10 @@ ul {
 }   
 
 li {
-    margin-bottom: 20px;
     font-size: 20px;
+}
+li a {
+    color: #ffcc00
 }
 
 a {
@@ -398,6 +509,29 @@ a {
     margin-left: 3%;
 }
 
+@media (max-width: 992px) {
+    .product {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .app-cchat {
+        background-size: 35% 45%;
+        background-position: 10% 30%;
+    }
+    .support-border {
+        border: none
+    }
+    .bcard-flex {
+        border-bottom: 2px solid white;
+    }
+
+    .feedback-title {
+        margin-top: 30px;
+    }
+}
+
 
 
 @media (max-width: 768px) {
@@ -407,6 +541,36 @@ a {
     .btn-add {
         margin-top: 20px;
     }
+
+    .app-cchat {
+        background-size: 35% 35%;
+    }
+}
+
+@media (max-width: 580px) {
+    .app-title {
+        font-size: 64px;
+    }
+    .app-subtitle {
+        font-size: 24px;
+    }
+    .app-subtitle a {
+        font-size: 20px;
+    }
+    .app-double-title {
+        font-size: 64px;
+    }
+    .app-single-img {
+        width: 50%;
+        height: auto;
+    }
+
+    .app-cfilm {
+        background-size: 65% 33%;
+    }
+    .app-cbook {
+        background-size: 60% 55%;
+    }
 }
 
 @media (max-width: 507px) {
@@ -414,5 +578,59 @@ a {
         white-space: normal;
         animation: none;
         -webkit-animation: none;
+    }
+    .app-double-title {
+        font-size: 48px;
+    }
+
+
+    .app-ctravel {
+        background-size: 50% 22%;
+    }
+    .app-cchat {
+        background-size: 35% 25%;
+    }
+
+    .support-title {
+        font-size: 32px;
+    }
+    .support-subtitle {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    li {
+        font-size: 16px;
+    }
+
+    .app-title {
+        font-size: 42px;
+    }
+    .app-subtitle {
+        font-size: 20px;
+    }
+    .app-subtitle a {
+        font-size: 18px;
+    }
+    .app-double-title {
+        font-size: 32px;
+    }
+    .support-subtitle {
+        height: 30vh;
+    }
+
+    .app-ctravel {
+        background-size: 50% 17%;
+    }
+    .app-cfilm {
+        background-size: 65% 25%;
+    }
+    .app-cbook {
+        background-size: 60% 45%;
+    }
+    .app-cchat {
+        background-size: 35% 20%;
     }
 }
