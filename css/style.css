@@ -36,36 +36,37 @@
 
   
 
-
-
-  .dsongentom{
-    margin: 0 auto;
-    color: white;
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);  
+  .text-typing
+  {
+      width: 100%;
+      margin: 0px auto 25px auto;
+      color: white;
+      text-align: center;
+      font-size: 180%;
+      white-space:nowrap;
+      overflow:hidden;
+      -webkit-animation: type 5s steps(50, end);
+      animation: type 5s steps(50, end);
   }
   
-  .desetungavon{
-    margin: 0px auto 25px auto;
-    animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
+  @keyframes type{
+      from { width: 0; }
   }
-  @keyframes typewriter{
-    from{width: 0;}
-    to{width: 24em;}
+  
+  @-webkit-keyframes type{
+      from { width: 0; }
   }
-  @keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
+
+  .color-white {
+      color: white;
   }
+
+  
 
 
 /* ind.html */
 .toggle-block {
-    height: 550px;
+    height: 650px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -105,7 +106,7 @@
     display: flex;
     align-items: center;
     animation: toggle-bgc 1s;
-    animation-delay: 4s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 
@@ -118,12 +119,16 @@
     height: 30px;
     margin-left: 5px;
     animation: toggle 1s;
-    animation-delay: 4s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
 .black {
     background-color: black;
+}
+
+.black-secondary {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .problem-left {
@@ -184,25 +189,123 @@
     animation: productOther 4s linear infinite;
 
 }
-.product-title {
-    color: white;
+
+/* app */
+
+.app {
+    display: flex;
+    align-items: center;
+    letter-spacing: 7px;
 }
+
+
+.app-single {
+    height: 70vh;
+    padding: 30px 20% 30px 0;
+    justify-content: center;
+}
+.app-title {
+    font-size: 90px;
+    font-weight: 400;
+}
+
+
+.app-subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    padding-right: 5%;
+}
+.app-subtitle a {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.app-double {
+    height: 650px;
+    flex-direction: column;
+
+}
+
+.app-double-title {
+    padding-top: 240px;
+    padding-bottom: 140px;
+    font-size: 72px;
+}
+
+
+.app-cfilm {
+    background-color: white;
+    background-image: url(file:///Users/macbook/Documents/programming/coolChoice_%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0/img/cfilm.jpg);
+    background-size: 65% 50%;
+    background-repeat: no-repeat;
+    background-position: -10% 31%;
+}
+
+.app-cbook {
+    background-color: #E5DFD3;
+    background-image: url(file:///Users/macbook/Documents/programming/coolChoice_%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0/img/cbook.jpg);
+    background-size: 60% 75%;
+    background-repeat: no-repeat;
+    background-position: -20% 20%;
+}
+
+.app-ctravel {
+    background-color: #E5DFD3;
+    background-image: url(file:///Users/macbook/Documents/programming/coolChoice_%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0/img/cTravel.jpg);
+    background-size: 50% 38%;
+    background-repeat: no-repeat;
+    background-position: -3% 39%
+}
+.app-cchat {
+    background-color: white;
+    background-image: url(file:///Users/macbook/Documents/programming/coolChoice_%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0/img/cchat.jpg);
+    background-size: 45% 45%;
+    background-repeat: no-repeat;
+    background-position: 0% 30%;
+}
+
+.app-cbook-title {
+    padding-left: 32%;
+}
+
 
 
 /* Блок поддержка */
 
 .support {
-    margin: 50px 0;
+    padding: 20px 0;
 }
 
 .support-title {
+    font-size: 48px;
     margin-bottom: 40px;
     font-weight: 600;
 }
+.support-list {
+}
+.support .row {
+    margin-top: 60px;
+}
 /* FEEDBACK */
+
+.feedback {
+    padding-left: 15px;
+}
+.support-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    height: 20vh;
+}
 form.feedback {
     max-width: 400px;
 }
+
+
+
+
+
 .navbar-dark .navbar-nav .nav-link {
     color: white;
 }
@@ -246,6 +349,24 @@ outline-style: none!important;
 box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}   
+
+li {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+a {
+    color: #c4494d;
+}
+
+.btn-firm {
+    background-color: #b0252a;
+    color: white;
+}
 .bg-nav {
     background-color: rgba(0,0,0,0.8)
 }
@@ -277,6 +398,8 @@ box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
     margin-left: 3%;
 }
 
+
+
 @media (max-width: 768px) {
     #add-place {
         flex-direction: column;
@@ -286,3 +409,10 @@ box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
     }
 }
 
+@media (max-width: 507px) {
+    .text-typing {
+        white-space: normal;
+        animation: none;
+        -webkit-animation: none;
+    }
+}
