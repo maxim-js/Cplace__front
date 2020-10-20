@@ -555,7 +555,7 @@ CFILM --------------------------------------------------------------------------
 */
 
 .cproduct {
-    padding: 100px 0;
+    padding: 100px 5px;
 }
 .cproduct-title {
     color: #b0252a;
@@ -592,6 +592,53 @@ CFILM --------------------------------------------------------------------------
 .ctravel {
     background-color: #E5DFD3;
 }
+
+/* CPLACE APP */
+
+.bgc-grey {
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+.cplace-block {}
+
+.cplace-title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+.cplace-subtitle {
+    font-style: 20px;
+    font-weight: 500;   
+}
+.cplace-option {
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.cplace-data {
+    padding: 60px;
+    font-size: 24px;
+}
+.btn-firm-lg {
+    padding: 20px 40px;
+    font-size: 26px;
+    border-radius: 25px;
+}
+.cplace-data-box {
+    display: flex;
+    justify-content: space-between;
+}
+.cplace-p {
+    font-size: 20px;
+}
+.hr {
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    margin: 15px 0;
+}
+
 /* 
 ------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------
@@ -665,6 +712,16 @@ MEDIA --------------------------------------------------------------------------
     .app-cbook {
         background-size: 60% 55%;
     }
+
+    .btn-firm-lg {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    .cplace-block {
+        margin: 0;
+    }
+
 }
 
 @media (max-width: 507px) {

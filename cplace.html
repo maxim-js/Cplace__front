@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>CoolChoice - cPlace. Куда сходить сегодня</title>
+    <link id="favicon" rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar navbar-dark bg-nav fixed-top navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#"><img class="logo" src="img/title.png" alt=""></a>
+            <a class="navbar-brand" href="index.html"><img class="logo" src="img/title.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,98 +26,70 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">cPlace</a>
+                        <a class="nav-link" href="cplace.html">cPlace</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">cFilm</a>
+                        <a class="nav-link" href="cfilm.html">cFilm</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">cTravel</a>
+                        <a class="nav-link" href="ctravel.html">cTravel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">cBook</a>
+                        <a class="nav-link" href="cbook.html">cBook</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">cChat</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Иркутск
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item disabled" href="#">Москва</a>
-                            <a class="dropdown-item disabled" href="#">Санкт-Петербург</a>
-                        </div>
+                        <a class="nav-link" href="cchat.html">cChat</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <h1>CoolChoice</h1>
-        <p>
-            Welcome to CoolChoice project!
-        </p>
-    </div>
 
     <!-- ОТОБРАЖЕНИЕ -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <ul class="list-group mb-3">
-                    <li class="list-group-item list-group-item-secondary">Место</li>
-                    <li class="list-group-item" id="place">No Data:(</li>
-                </ul>
+    <div class="container cproduct">
+        <h2 class="cproduct-title">
+            cPlace
+        </h2>
+        <p class="cplace-p">
+            - приложение для выбора лучшего выбора места встречи
+        </p>
 
-                <ul class="list-group">
-                    <li class="list-group-item list-group-item-secondary">Время</li>
-                    <li class="list-group-item" id="time">No Data:(</li>
-                </ul>
-            </div>
-
-
-
-            <!-- ДОБАВИТЬ СВОЕ МЕСТО -->
-
-            <div class="col">
-                <div class="card card-body">
-                    <p>Добавьте собственное место встречи</p>
-                    <form name="insCode">
-                        <div id="add-place" class="form-group d-flex">
-                            <input type="text" name="strCode" class="form-control mr-1" id="inputAddPlace">
-                            <button type="button" class="btn btn-primary btn-add"
-                                onclick="insertCode()">Добавить</button>
-                        </div>
-                    </form>
+        <div class="row cplace-block">
+            <div class="col-lg-8 col-12 cplace-data">
+                <div class="d-flex cplace-data-box">
+                    <div class="">
+                        <p>Место</p>
+                        <p id="place">No Data:(</p>
+                    </div>
+                    <div class="">
+                        <p>Время</p>
+                        <p id="time">No Data:(</p>
+                    </div>
                 </div>
 
-
+                <div class="d-flex">
+                    <button type="button" class="btn btn-firm btn-firm-lg mt-3" id="btn" style="margin: 0 auto;">Выбери
+                        место</button>
+                </div>
 
             </div>
-        </div>
-    </div>
 
-    <!-- НАСТРОЙКИ -->
-    <div class="container mt-5">
-        <div class="card card-toggle">
-            <a class="option" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                aria-controls="collapseExample">
-                Настройки:
-            </a>
-        </div>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
+            <div class="col-lg-4 col-12 cplace-option">
+                <p class="cplace-title"> Настройки:</p>
+                <div class="hr"></div>
 
+
+                <p class="cplace-subtitle">Добавить необходимый каталог:</p>
 
                 <div class="form-group form-check">
                     <input type="checkbox" checked="checked" class="form-check-input" id="checkbox">
                     <label class="form-check-label" for="exampleCheck1">Добавить каталог популярных мест</label>
                 </div>
 
-                <p>Выберете время встречи</p>
+                <div class="hr"></div>
 
+                <p class="cplace-subtitle">Выберете время встречи:</p>
                 <div class="d-flex">
 
                     <div class="form-group choose-time">
@@ -183,13 +155,56 @@
                     </div>
                 </div>
 
+                <div class="hr"></div>
+
+                <p class="cplace-subtitle">Добавьте собственное место встречи:</p>
+                <form name="insCode">
+                    <div id="add-place" class="form-group d-flex">
+                        <input type="text" name="strCode" class="form-control mr-1" id="inputAddPlace">
+                        <button type="button" class="btn btn-firm btn-add" onclick="insertCode()">Добавить</button>
+                    </div>
+                </form>
             </div>
+
+
+
         </div>
+
+
     </div>
 
-    <div class="container d-flex">
-        <button type="button" class="btn btn-primary mt-3" id="btn" style="margin: 0 auto;">Нажми на меня</button>
+
+    <div class="black">
+        <footer class="container">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img src="img/title.png" alt="">
+                </div>
+                <div class="col-6 col-md mt-3">
+                    <span class="footer-subtitle">Приложения</span>
+                    <ul class="list-unstyled text-small footer-list">
+                        <li><a class="text-muted" href="#">cPlace</a></li>
+                        <li><a class="text-muted" href="#">cFilm</a></li>
+                        <li><a class="text-muted" href="#">cTravel</a></li>
+                        <li><a class="text-muted" href="#">cBook</a></li>
+                        <li><a class="text-muted" href="#">cChat</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md mt-3">
+                    <span class="footer-subtitle">Контакты</span>
+                    <ul class="list-unstyled text-small footer-list">
+                        <li class="color-white">Email: <a class="text-muted" href="#">makssp7@inbox.ru</a></li>
+                        <li class="color-white">City: <a class="text-muted" href="#">Russia, Irkutsk</a></li>
+                        <li class="color-white">Github: <a class="text-muted" href="#">@maxim-js</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
     </div>
+
     <script src="js/js.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
